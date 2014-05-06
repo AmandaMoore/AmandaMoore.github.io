@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>About Me</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+</head>
+<body>
+    <div class="headfoot">
+        <div class="contact">
+            <p class="contactme">Contact Me:</p>
+            <p>Amanda Moore<br />
+            <a href="mailto:mandy@vagabondette.com">mandy@vagabondette.com</a><br />
+            206-445-0854 (home)<br />
+            202-779-5642 (mobile)<br />
+            skype: smallseo </p>
+        </div>
+        <div class="trimg">
+            <img src="http://i.imgur.com/9hf30F4.jpg">
+            <div class="quote">My favorite quote and personal philosophy.</div>
+        </div>
+    </div>
+    <div class="intro">
+        <h1>Meet Mandy</h1>
+        <div class="cenimg"><img class="ampic" src="http://i.imgur.com/bUcxnY2.jpg?1"></div>
+    </div>
+    <h2>A Little About Me</h2>
+    <div class="bio">
+        <ul>
+            <li>In 2005 I left a successful career as a Business Operations Consultant to pursue my dream of running my own business and traveling full-time.</li>
+            <li>From 2005-2008 I did freelance consulting while learning how to build websites and do SEO.</li>
+            <li>In 2008 I left the USA and began living/traveling internationally full-time.</li>
+            <li>From 2008-2013 I built, customized, and sold over 200 websites, most using the WordPress platform.</li>
+            <li>From 2008-2013 I lived in or visited 17 different countries, paying for my travels by building websites, providing SEO services, and doing work exchanges.</li>
+        </ul>
+    </div>
+    <h2>My Interests</h2>
+    <div id="content">
+        <div class="gallery-wrap">
+            <div class="gallery clearfix">
+                <div class="gallery__item">
+                    <a href="images/image1-big.jpg" class="gallery__link">
+                        <img src="images/image1.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                 <div class="gallery__item">
+                    <a href="images/image2-big.jpg" class="gallery__link">
+                        <img src="images/image2.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image3-big.jpg" class="gallery__link">
+                        <img src="images/image3.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image4-big.jpg" class="gallery__link">
+                        <img src="images/image4.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image1-big.jpg" class="gallery__link">
+                        <img src="images/image1.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image2-big.jpg" class="gallery__link">
+                        <img src="images/image2.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image3-big.jpg" class="gallery__link">
+                        <img src="images/image3.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image4-big.jpg" class="gallery__link">
+                        <img src="images/image4.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image1-big.jpg" class="gallery__link">
+                        <img src="images/image1.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item" style="width: 400px">
+                    <a href="images/image2-big.jpg" class="gallery__link">
+                        <img src="images/image2.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+                <div class="gallery__item">
+                    <a href="images/image3-big.jpg" class="gallery__link">
+                        <img src="images/image3.jpg" class="gallery__img" alt="" />
+                    </a>
+                </div>
+            </div> <!-- .gallery -->
+            <div class="gallery__controls clearfix">
+                <div href="#" class="gallery__controls-prev">
+                    <img src="images/prev.png" alt="" />
+                </div>
+                <div href="#" class="gallery__controls-next">
+                    <img src="images/next.png" alt="" />
+                </div>
+            </div> <!-- .gallery__controls -->
+        </div> <!-- .gallery-wrap -->
+    </div> <!-- #content -->
+        <h2>My Goals For This WDI:</h2>
+    <div class="headfoot">
+        <div class="blimg">
+            <img src="http://i.imgur.com/6ZyOUQD.jpg">
+            <div class="goal">My future life.</div>
+        </div>
+        <div class="goals">
+            <ul>
+                <li>Become competent enough working in a full-stack environment to secure a job as a developer.</li>
+                <li>Work 2-5 years as a developer, hopefully in a consulting position which will allow/require extensive travel, to increase my skills, build my portfolio, and establish a strong network.</li>
+                <li>Start working as a freelance developer so I can continue traveling while I work without having to waste time bidding on small jobs on guru.com and similar sites.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    // Only run everything once the page has completely loaded
+    $(window).load(function(){
+
+        // Set general variables
+        // ====================================================================
+        var totalWidth = 0;
+
+        // Total width is calculated by looping through each gallery item and
+        // adding up each width and storing that in `totalWidth`
+        $(".gallery__item").each(function(){
+            totalWidth = totalWidth + $(this).outerWidth(true);
+        });
+
+        // The maxScrollPosition is the furthest point the items should
+        // ever scroll to. We always want the viewport to be full of images.
+        var maxScrollPosition = totalWidth - $(".gallery-wrap").outerWidth();
+
+        // This is the core function that animates to the target item
+        // ====================================================================
+        function toGalleryItem($targetItem){
+            // Make sure the target item exists, otherwise do nothing
+            if($targetItem.length){
+
+                // The new position is just to the left of the targetItem
+                var newPosition = $targetItem.position().left;
+
+                // If the new position isn't greater than the maximum width
+                if(newPosition <= maxScrollPosition){
+
+                    // Add active class to the target item
+                    $targetItem.addClass("gallery__item--active");
+
+                    // Remove the Active class from all other items
+                    $targetItem.siblings().removeClass("gallery__item--active");
+
+                    // Animate .gallery element to the correct left position.
+                    $(".gallery").animate({
+                        left : - newPosition
+                    });
+                } else {
+                    // Animate .gallery element to the correct left position.
+                    $(".gallery").animate({
+                        left : - maxScrollPosition
+                    });
+                };
+            };
+        };
+
+        // Basic HTML manipulation
+        // ====================================================================
+        // Set the gallery width to the totalWidth. This allows all items to
+        // be on one line.
+        $(".gallery").width(totalWidth);
+
+        // Add active class to the first gallery item
+        $(".gallery__item:first").addClass("gallery__item--active");
+
+        // When the prev button is clicked
+        // ====================================================================
+        $(".gallery__controls-prev").click(function(){
+            // Set target item to the item before the active item
+            var $targetItem = $(".gallery__item--active").prev();
+            toGalleryItem($targetItem);
+        });
+
+        // When the next button is clicked
+        // ====================================================================
+        $(".gallery__controls-next").click(function(){
+            // Set target item to the item after the active item
+            var $targetItem = $(".gallery__item--active").next();
+            toGalleryItem($targetItem);
+        });
+    });
+    </script>
+
+    <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.1.js"></script>
+    <script type="text/javascript">
+    // Fancybox specific
+    // To make images pretty. Not important
+    $(document).ready(function(){
+        $(".gallery__link").fancybox({
+            'titleShow'     : false,
+            'transitionIn'  : 'elastic',
+            'transitionOut' : 'elastic'
+        });
+    });
+    </script>
+</body>
+</html>
